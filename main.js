@@ -5,11 +5,15 @@ let buttonStart = document.getElementById('button_start')
 let buttonStop = document.getElementById('button_stop')
 let buttonReset = document.getElementById('button_reset')
 
-
+let width = window.innerWidth
 
 function move () {
-    testElement.style.marginLeft=moveSize + 'px'
-    moveSize = moveSize + 3
+    if(moveSize < window.innerWidth-200) {
+        testElement.style.marginLeft=moveSize + 'px'
+        moveSize = moveSize + 3
+    } else {
+        stop()
+    }
 }
 
 let timerId
