@@ -303,3 +303,81 @@ button {
     top: 30px;
     right: 38px;
 }
+
+/* -------------PRODUCTS---------- */
+.products {
+    flex-wrap: nowrap;
+    display: flex;
+    justify-content: space-between;
+}
+
+.products__item {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+    padding: 120px 0 80px;
+}
+
+.products__item--bg-brown {
+    background-color: #632b17;
+}
+
+.products__item--bg-green {
+    background-color: #178670;
+}
+
+.products__item--bg-yellow {
+    background-color: #f7ae3b;
+}
+
+.products__item--bg-red {
+    background-color: #c3471b;
+}
+
+.products__img {
+    width: 120px;
+}
+
+.products__title {
+    font-family: "MuliBold";
+    font-size: 2.4rem;
+    line-height: 1;
+    letter-spacing: normal;
+    margin-top: 34px;
+    text-align: center;
+}
+
+.products__capacity {
+    font-size: 2.1rem;
+    font-style: "MuliItalic";
+    line-height: 2;
+    margin: 6px 0 50px 0;
+}
+
+.products__btn-white {
+    width: 204px;
+    height: 60px;
+    border: solid 2px white;
+    background-color: transparent;
+    color: #ffffff;
+    text-align: start;
+    padding-left: 40px;
+    position: relative;
+    font-size: 2.1rem;
+}
+
+.products__btn-white::after {
+    display: inline-block;
+    content: "";
+    background-image: url(./assets/ArrowRight.png);
+    background-size: cover;
+    position: absolute;
+    height: 16px;
+    width: 30px;
+    top: 50%;
+    right: 38px;
+    transform: translateY(-50%);
+}

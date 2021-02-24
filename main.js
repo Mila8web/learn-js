@@ -131,3 +131,17 @@ function toggleBurgerMenu() {
 }
 
 burgerMenuHeader()
+
+// -----------------QuerySelector
+// <!-- при нажатии на кнопку buy будем увеличивать число элементов в корзине (header and products) -->
+
+let buy_buttons = document.querySelectorAll('.products__btn-white')
+let cart_count = document.getElementById('cart_count')
+
+function addToCart() {
+    cart_count.innerText = Number(cart_count.innerText)+1 //Number: строку переводим в номер 
+}
+
+for(let i=0; i < buy_buttons.length; i++) {
+    buy_buttons[i].addEventListener('click', addToCart)
+}
