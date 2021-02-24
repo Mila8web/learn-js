@@ -142,6 +142,9 @@ function addToCart() {
     cart_count.innerText = Number(cart_count.innerText)+1 //Number: строку переводим в номер 
 }
 
+// buy_buttons[0].addEventListener
+// buy_buttons[1].addEventListener //и т.д. всем кнопкам
+
 for(let i=0; i < buy_buttons.length; i++) {
     buy_buttons[i].addEventListener('click', addToCart)
 }
