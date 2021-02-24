@@ -1,3 +1,50 @@
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: "MuliRegular", sans-serif;
+    margin: 0;
+    height: 100vh;
+    font-size: 10px;
+}
+
+
+/* Для всех одинаковые стили тегам */
+li {
+    list-style: none;
+    text-decoration: none;
+    font-family: "MuliBold", sans-serif;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+button {
+    font-family: "MuliExtraBold";
+    border-radius: 30px;
+    background-color: #0aa566;
+}
+
+/* классам */
+.title {
+    font-family: "MuliExtraBold";
+}
+
+.text {
+    font-family: "MuliRegular";
+}
+
+
+/* ------------------------------------ */
+
+
 .wrap1,
 .wrap2 {
     width: 100vw;
@@ -18,7 +65,7 @@
 }
 
 button {
-    border: 2px solid rgb(29, 28, 28);
+    border: 2px solid rgb(195, 149, 238);
     width: 100px;
     height: 50px;
     font-size: 20px;
@@ -37,4 +84,222 @@ button {
 .burger_active {
     background: url('./assets/close.svg') no-repeat center;
     background-size: contain;
+}
+
+
+
+/* -------------HEADER---------- */
+.header {
+    height: 300px;
+    background: gold;
+    background-position: center;
+    background-size: cover;
+    color: white;
+}
+
+.header-top {
+    padding: 70px 100px 70px;
+    position: relative;
+}
+
+/* стили для бургер-меню */
+.burger_icon {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    background: url('./assets/menu.svg') no-repeat center;
+    background-size: contain;
+    
+}
+
+.close_icon {
+    position: absolute;
+    cursor: pointer;
+    right: 10px;
+    top: 10px;
+    width: 50px;
+    height: 50px;
+    background: url('./assets/close.svg') no-repeat center;
+    background-size: contain;
+}
+
+.burger_menu {
+    background-color:#0aa566;
+    width: 200px;
+    height: 100vh;
+    position: fixed;
+    z-index: 9;
+    top: 0;
+    transition:  left ease 0.3s ;
+    left: -200px;
+    }
+
+    .burger_menu_active {
+        left: 0;
+    }
+
+/* -------------------------------------- */
+
+.header__top-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/* применить стиля для меню */
+.menu__list {
+    display: flex;
+    align-items: center;
+}
+
+/* зададим внешние отступы между li */
+.menu__item {
+    margin-right: 30px;
+}
+
+.menu__item:last-child {
+    margin-right: 0;
+}
+
+.menu__link {
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    text-align: left;
+    color: #ffffff;
+}
+
+/* применить стили для иконок поиска и пр. */
+.header__right-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.header__personal {
+    margin-right: 130px;
+    position: relative;
+}
+
+.header__personal::after {
+    content: "";
+    height: 2px;
+    width: 48px;
+    background-color: #ffd68f;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    right: -94px;
+    transform: transparenty(-50%);
+}
+
+.personal__list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.personal__item {
+    margin-right: 45px;
+}
+
+.personal__item:last-child {
+    margin-right: 0;
+    position: relative;
+}
+
+.personal__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.personal__cart-count {
+    width: 18px;
+    height: 18px;
+    background-color: white;
+    font-size: 10px;
+    display: inline-block;
+    line-height: 1.8;
+    text-align: center;
+    border-radius: 50%;
+    color: black;
+    position: absolute;
+    top: -12px;
+    right: -15px;
+}
+
+/* применить стили для социальных иконок */
+.header__social::before {
+    display: inline-block;
+    background-image: url("../images/1header/line.png");
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+}
+
+.social__list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social__list-item {
+    margin-right: 10px;
+}
+
+.social__list-item:last-child {
+    margin-right: 0;
+}
+
+.social__link {
+    width: 35px;
+    height: 35px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+/* применить стили для логотипа */
+.header__logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* применить стили для кнопки в header */
+.header__content {
+    display: flex;
+    justify-content: center;
+}
+
+.header__btn {
+    width: 280px;
+    height: 70px;
+    padding-left: 30px;
+    border-radius: 35px;
+    border: none;
+    background-color: #0aa566;
+    font-size: 2.4rem;
+    color: #ffffff;
+    text-align: left;
+    position: relative;
+
+}
+
+.btn--bg-green::after {
+    display: inline-block;
+    content: "";
+    background-image: url('./assets/ArrowRight.png');
+    background-size: cover;
+    position: absolute;
+    height: 16px;
+    width: 30px;
+    top: 30px;
+    right: 38px;
 }
