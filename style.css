@@ -19,5 +19,9 @@ button {
     cursor: pointer;
     background: url(./assets/menu.svg) no-repeat center;
     background-size: contain;
-    transition: all 3s linear;
+    transition: all 0.3s linear;
+}
+.burger_active {
+    background: url('./assets/close.svg') no-repeat center;
+    background-size: contain;
 }
