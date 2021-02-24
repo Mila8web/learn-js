@@ -94,10 +94,23 @@ function reset () {
     testElement.style.marginLeft = moveSize + 'px'
 }
 
-// setTimeout (function(){
-//     testElement.style.marginLeft=300+'px'
-// }, 3000)
+setTimeout (function(){
+    testElement.style.marginLeft=300+'px'
+}, 3000)
 
 buttonStart.onclick = start
 buttonStop.onclick = stop
 buttonReset.onclick = reset    
+
+// -----------------QuerySelector
+
+
+function burgerMenu() {
+    let burger = document.querySelector('.burger')
+    burger.addEventListener('click', function () {
+        burger.classList.toggle('burger_active') 
+    })
+}
+
+burgerMenu()
+

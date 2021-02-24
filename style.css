@@ -12,3 +12,12 @@ button {
     font-size: 20px;
     font-weight: 800;
 }
+
+.burger {
+    width: 180px;
+    height: 120px;
+    cursor: pointer;
+    background: url(./assets/menu.svg) no-repeat center;
+    background-size: contain;
+    transition: all 3s linear;
+}
